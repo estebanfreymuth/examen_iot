@@ -3,32 +3,32 @@ from supabase import create_client, Client
 
 app = Flask(__name__)
 
-# 1. Configuración de tus credenciales de Supabase
+# configuracion de supabase
 SUPABASE_URL = "https://byobujonqxckavzvmorc.supabase.co"
 SUPABASE_KEY = "sb_publishable_yF0idrHP0Lt_oxwaiBiiNA_gqQI0Sr8"
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
-# Variables globales para guardar el estado en tiempo real
+# variables globales para guardar el estado en tiempo real
 nivel_gas_actual = 0.0
 estado_actual = "NORMAL"
 
 @app.route('/')
 def home():
-    # Configuración dinámica avanzada de colores y efectos según el estado
+    # configuracion de colores y efectos según el estado
     if estado_actual == "ADVERTENCIA":
-        color_alerta = "#ffbb00"  # Ámbar neón
+        color_alerta = "#ffbb00"  # ambar neon
         color_rgb = "255, 187, 0"
         animacion = ""
     elif estado_actual == "CRITICO":
-        color_alerta = "#ff3333"  # Rojo vibrante
+        color_alerta = "#ff3333"  # rojo
         color_rgb = "255, 51, 51"
-        animacion = "animation: pulso 1.5s infinite alternate;"  # Parpadeo de alerta
+        animacion = "animation: pulso 1.5s infinite alternate;"  # parpadeo de alerta
     else:
-        color_alerta = "#00ff88"  # Verde neón
+        color_alerta = "#00ff88"  # verde neon
         color_rgb = "0, 255, 136"
         animacion = ""
 
-    # Calcular el porcentaje de la barra de progreso (Máximo estimado: 1000 PPM)
+    # calcular el porcentaje de la barra de progreso hasta 1000
     porcentaje_barra = min(100, max(0, (nivel_gas_actual / 1000.0) * 100))
 
     return f"""
@@ -161,7 +161,7 @@ def home():
     </html>
     """
 
-# RUTA POST: Aquí la ESP32 N°1 (Sensor) enviará los datos
+# esp32 (gas) enviara datos de gas
 @app.route('/actualizar_gas', methods=['POST'])
 def actualizar_gas():
     global nivel_gas_actual, estado_actual
@@ -179,7 +179,7 @@ def actualizar_gas():
     else:
         estado_actual = "NORMAL"
         
-    # 2. Guardar automáticamente el registro en Supabase forzando la conversión a entero (int)
+    # guardar el registro en supabase forzando la conversión a entero (int)
     try:
         registro = {
             "nivel_gas": int(nivel_gas_actual),
@@ -192,7 +192,7 @@ def actualizar_gas():
     
     return jsonify({"status": "ok", "estado_alertado": estado_actual}), 200
 
-# RUTA GET: Aquí la ESP32 N°2 (Alarma) preguntará qué hacer
+# esp32s3 (alarma) preguntara que hacer
 @app.route('/obtener_estado', methods=['GET'])
 def obtener_estado():
     global estado_actual
