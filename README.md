@@ -28,7 +28,22 @@ Esp32S3: monitor visual que realiza consultas HTTP GET a la ruta /obtener_estado
 procesa la respuesta JSON y renderiza dinámicamente una barra de progreso en su pantalla TFT/LCD cambiando el esquema de colores dependiendo del riesgo detectado,
 (Verde para niveles estables, Amarillo/Rojo para advertencias)
 
+Como primer paso, hacemos una carpeta que dejamos en el escritorio, para luego abrirla y abrir el codigo del servidor flask que dejamos dentro de la carpeta,
+al abrir el programa se puede ver como funciona con exito, mostrandonos que hay conexion y el valor que entrega el esp32 emisor.
 
 <img width="811" height="517" alt="WhatsApp Image 2026-07-09 at 12 17 41" src="https://github.com/user-attachments/assets/c16e99cd-209b-49f4-a5a0-3aaba4646cc7" />
+
+A continuacion vamos a ver en el navegador la interfaz web (frontend) que nuestro servidor Flask esta sirviendo desde el backend.
+El backend (corriendo en tu terminal) procesa la logica, se conecta a Supabase y le entrega al navegador ese diseño visual con los datos en tiempo real.
+
+<img width="736" height="560" alt="WhatsApp Image 2026-07-09 at 12 17 53" src="https://github.com/user-attachments/assets/d60faa1f-2a5d-44ac-8e04-dd72b57779d6" />
+
+<img width="769" height="599" alt="WhatsApp Image 2026-07-09 at 12 18 36" src="https://github.com/user-attachments/assets/52426070-582e-4e33-9f34-4a0e594d64d7" />
+
+
+
+
+
+
 
 
