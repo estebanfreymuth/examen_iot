@@ -29,3 +29,6 @@ procesa la respuesta JSON y renderiza dinámicamente una barra de progreso en su
 (Verde para niveles estables, Amarillo/Rojo para advertencias)
 
 
+<img width="811" height="517" alt="WhatsApp Image 2026-07-09 at 12 17 41" src="https://github.com/user-attachments/assets/c16e99cd-209b-49f4-a5a0-3aaba4646cc7" />
+
+
