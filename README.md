@@ -38,6 +38,10 @@ El backend (corriendo en tu terminal) procesa la logica, se conecta a Supabase y
 
 <img width="769" height="599" alt="WhatsApp Image 2026-07-09 at 12 18 36" src="https://github.com/user-attachments/assets/52426070-582e-4e33-9f34-4a0e594d64d7" />
 
+Luego podemos apreciar como se envia un mensaje de advertenci a whatsapp cuando el estado es critico
+
+<img width="813" height="813" alt="WhatsApp Image 2026-07-09 at 12 47 17 (1)" src="https://github.com/user-attachments/assets/9ab687be-7b78-45a1-9443-e95d25c43bc7" />
+
 Por ultimo, adjuntamos la imagen del circuito, con los dos esp32 funcionando independientemente.
 
 <img width="1200" height="1600" alt="WhatsApp Image 2026-07-08 at 22 29 47 (1)" src="https://github.com/user-attachments/assets/bccc10d6-0340-4791-916f-51f567751bf5" />
