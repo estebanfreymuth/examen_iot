@@ -1,3 +1,5 @@
+Liliana Flores y Esteban Freymuth
+
 Este proyecto implementa un ecosistema de internet (IoT) con una arquitectura cliente servidor en tiempo real.
 Utiliza un ESP32 y un ESP32S3 para la adquisición y visualización de datos, junto a un backend local desarrollado en Flask y una base de datos relacional en la nube mediante Supabase.
 Sistema monitoreo de nivel de gas
@@ -47,6 +49,7 @@ Luego podemos apreciar como se envia un mensaje de advertenci a whatsapp cuando 
 Por ultimo, adjuntamos la imagen del circuito, con los dos esp32 funcionando independientemente.
 
 <img width="1200" height="1600" alt="WhatsApp Image 2026-07-08 at 22 29 47 (1)" src="https://github.com/user-attachments/assets/bccc10d6-0340-4791-916f-51f567751bf5" />
+
 
 
 
