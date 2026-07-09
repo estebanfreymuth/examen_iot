@@ -31,6 +31,8 @@ procesa la respuesta JSON y renderiza dinámicamente una barra de progreso en su
 Como primer paso, hacemos una carpeta que dejamos en el escritorio, para luego abrirla y abrir el codigo del servidor flask que dejamos dentro de la carpeta,
 al abrir el programa se puede ver como funciona con exito, mostrandonos que hay conexion y el valor que entrega el esp32 emisor.
 
+<img width="811" height="517" alt="WhatsApp Image 2026-07-09 at 12 17 41 (1)" src="https://github.com/user-attachments/assets/64023508-8a9f-4cf5-969a-4690fc81961b" />
+
 A continuacion vamos a ver en el navegador la interfaz web (frontend) que nuestro servidor Flask esta sirviendo desde el backend.
 El backend (corriendo en tu terminal) procesa la logica, se conecta a Supabase y le entrega al navegador ese diseño visual con los datos en tiempo real.
 
